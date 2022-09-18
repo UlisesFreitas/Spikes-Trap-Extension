@@ -1,0 +1,938 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": false,
+    "orientation": "landscape",
+    "packageName": "io.crimsongames.spikestrap",
+    "pixelsRounding": false,
+    "projectUuid": "268e2b25-f296-4776-b6b4-74ce2277809c",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "",
+    "templateSlug": "",
+    "useExternalSourceFiles": false,
+    "version": "1.0.0",
+    "name": "Spikes trap",
+    "description": "Example of the Extension SpikesTrap.",
+    "author": "Crimson Games IO",
+    "windowWidth": 320,
+    "windowHeight": 192,
+    "latestCompilationDirectory": "",
+    "maxFPS": 0,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "authorIds": [
+      "ZShmW1xkW7WWl9AkB78VITJMiTw1"
+    ],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Floor-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Floor-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Player_1_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Player_1_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Player_1_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Player_1_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "SpikesTrapTop-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SpikesTrapTop-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "SpikesTrap-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SpikesTrap-1.png",
+        "smoothed": false,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [],
+  "layouts": [
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "GameScene",
+      "name": "GameScene",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 1,
+        "gridHeight": 1,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 4.124999694824212,
+        "windowMask": true
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 8,
+          "layer": "",
+          "name": "Floor",
+          "persistentUuid": "a2196caa-98ac-4f22-b8c2-4efd081a0e14",
+          "width": 320,
+          "x": 1,
+          "y": 159,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "d3fc65fd-b028-4f46-abe0-2cfa9a1f6186",
+          "width": 0,
+          "x": 32,
+          "y": 148,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "6b3faeb6-ea84-44c3-9b69-ecdcd98934c6",
+          "width": 24,
+          "x": 226,
+          "y": 147,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "af960c0c-82f7-4bf5-80b7-11a21c676659",
+          "width": 8,
+          "x": 82,
+          "y": 147,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "9fd9a9ed-50f9-4da5-9899-00d6d5bb044d",
+          "width": 8,
+          "x": 90,
+          "y": 147,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "ac4804a2-6f65-4da0-bbe8-a29556f8a196",
+          "width": 8,
+          "x": 98,
+          "y": 147,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "be0f4f68-752d-4cf8-8290-a3de9c75e83d",
+          "width": 8,
+          "x": 106,
+          "y": 147,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "2d6f57ba-6193-4714-8500-a859aa20ef7f",
+          "width": 8,
+          "x": 164,
+          "y": 147,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "a73c8e0e-e844-4e27-8afc-8c8ed0694e5d",
+          "width": 8,
+          "x": 172,
+          "y": 147,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 5,
+          "layer": "",
+          "name": "SpikesBase",
+          "persistentUuid": "ef301c8b-3b1f-40b7-87e3-f2b008d83b33",
+          "width": 8,
+          "x": 180,
+          "y": 147,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 8,
+          "layer": "",
+          "name": "Floor",
+          "persistentUuid": "1eb8c407-95e2-4186-9c06-754d552decb8",
+          "width": 320,
+          "x": 0,
+          "y": 152,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 8,
+          "name": "Floor",
+          "tags": "",
+          "texture": "Assets\\Floor-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 8,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": false,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Player",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "acceleration": 1500,
+              "canGoDownFromJumpthru": true,
+              "canGrabPlatforms": false,
+              "canGrabWithoutMoving": true,
+              "deceleration": 1500,
+              "gravity": 1000,
+              "ignoreDefaultControls": false,
+              "jumpSpeed": 350,
+              "jumpSustainTime": 0.2,
+              "ladderClimbingSpeed": 150,
+              "maxFallingSpeed": 700,
+              "maxSpeed": 35,
+              "name": "PlatformerObject",
+              "slopeMaxAngle": 60,
+              "type": "PlatformBehavior::PlatformerObjectBehavior",
+              "useLegacyTrajectory": false,
+              "xGrabTolerance": 10,
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "Idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Player_1_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 8,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 8,
+                        "y": 16
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 6,
+                            "y": 8
+                          },
+                          {
+                            "x": 12,
+                            "y": 8
+                          },
+                          {
+                            "x": 12,
+                            "y": 16
+                          },
+                          {
+                            "x": 6,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Player_1_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 8,
+                        "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 8,
+                        "y": 16
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 6,
+                            "y": 8
+                          },
+                          {
+                            "x": 12,
+                            "y": 8
+                          },
+                          {
+                            "x": 12,
+                            "y": 16
+                          },
+                          {
+                            "x": 6,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 5,
+          "name": "SpikesBase",
+          "tags": "",
+          "texture": "SpikesTrapTop-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 8,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "canBeGrabbed": false,
+              "name": "Platform",
+              "platformType": "NormalPlatform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "yGrabOffset": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "Spikes",
+          "tags": "",
+          "texture": "SpikesTrap-1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 8,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SpikesTrap::SpikesTrap"
+              },
+              "parameters": [
+                "",
+                "Player",
+                "SpikesBase",
+                "Spikes",
+                "Tween",
+                "750",
+                "1000",
+                "\"swingFromTo\"",
+                "1",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 32,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ]
+    }
+  ],
+  "externalEvents": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "General",
+      "description": "# Create a spikes trap\n-- How to use\n- Add one Sprite to use as base for the spikes.\n- Add one Sprite for the spikes.\n- Set duration for the upward movement of the spikes, in milliseconds.\n- Set duration for the downward movement of the spikes, in milliseconds.\n- Set cooldown time in seconds.",
+      "extensionNamespace": "",
+      "fullName": "Set a Spikes Trap",
+      "helpPath": "https://www.ulisesfreitas.com/gdevelop-extensions/",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMjksM2gtMnYxNGMwLDAuNi0wLjQsMS0xLDFoLTJ2MTFoNWMwLjYsMCwxLTAuNCwxLTFWNEMzMCwzLjQsMjkuNiwzLDI5LDN6Ii8+DQoJPHBhdGggZD0iTTE1LDI5VjE4aC0xYy0wLjYsMC0xLTAuNC0xLTFWM2gtMnYxNGMwLDAuNi0wLjQsMS0xLDF2MTFIMTV6Ii8+DQoJPHBhdGggZD0iTTE5LDN2MTRjMCwwLjYtMC40LDEtMSwxaC0xdjExaDVWMThjLTAuNiwwLTEtMC40LTEtMVYzSDE5eiIvPg0KCTxwYXRoIGQ9Ik04LDE4SDZjLTAuNiwwLTEtMC40LTEtMVYzSDNDMi40LDMsMiwzLjQsMiw0djI0YzAsMC42LDAuNCwxLDEsMWg1VjE4eiIvPg0KPC9nPg0KPC9zdmc+DQo=",
+      "name": "SpikesTrap",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Music/Music_keyboard_piano_keys_play.svg",
+      "shortDescription": "With 2 Sprites create a spike trap.",
+      "version": "1.0.0",
+      "tags": [
+        "Spikes",
+        "Trap"
+      ],
+      "authorIds": [
+        "ZShmW1xkW7WWl9AkB78VITJMiTw1"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [
+        {
+          "description": "Set a Timed Spike Trap",
+          "fullName": "Set a Timed Spike Trap",
+          "functionType": "Action",
+          "group": "",
+          "name": "SpikesTrap",
+          "private": false,
+          "sentence": "Set a trap with this base:_PARAM2_ and use this spikes:_PARAM3_  this target: _PARAM1_ move up duration:_PARAM5_ move down duration:_PARAM6_ set animation:_PARAM7_ cooldown:_PARAM8_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "SpikesTrapBase",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Spikes",
+                        "SpikesTrapBase.X()",
+                        "SpikesTrapBase.Y()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::LinkObjects"
+                      },
+                      "parameters": [
+                        "",
+                        "Spikes",
+                        "SpikesTrapBase"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::Width"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "=",
+                        "SpikesTrapBase.Width()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "=",
+                        "SpikesTrapBase.ZOrder()-1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "SpikesTrapBase",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Player",
+                        "SpikesTrapBase",
+                        "",
+                        "",
+                        "no"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "SpikesTrapBase",
+                        "__SpikesTrapActivated__",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Spikes",
+                        "SpikesTrapBase",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "SpikesTrapBase",
+                        "__SpikesTrapActivated__",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionYTween"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveUp\"",
+                        "Spikes.Y()-Spikes.Height()+SpikesTrapBase.Height()",
+                        "GetArgumentAsString(\"MoveAnimation\")",
+                        "GetArgumentAsNumber(\"MoveUpTime\")",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Spikes",
+                        "SpikesTrapBase",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::Exists"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveUp\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveUp\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::RemoveTween"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveUp\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "GetArgumentAsNumber(\"Cooldown\")"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::AddObjectPositionYTween"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveDown\"",
+                        "Spikes.Y()+Spikes.Height()-SpikesTrapBase.Height()",
+                        "GetArgumentAsString(\"MoveAnimation\")",
+                        "GetArgumentAsNumber(\"MoveDownTime\")",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Spikes",
+                        "SpikesTrapBase",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::Exists"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveDown\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::HasFinished"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveDown\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::RemoveTween"
+                      },
+                      "parameters": [
+                        "Spikes",
+                        "Tween",
+                        "\"MoveDown\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "SpikesTrapBase",
+                        "__SpikesTrapActivated__",
+                        "False"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "The player.",
+              "longDescription": "",
+              "name": "Player",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Sprite to use as base for the spikes.",
+              "longDescription": "",
+              "name": "SpikesTrapBase",
+              "optional": false,
+              "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Sprite for the spikes.",
+              "longDescription": "",
+              "name": "Spikes",
+              "optional": false,
+              "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Tween for the spikes.",
+              "longDescription": "",
+              "name": "Tween",
+              "optional": false,
+              "supplementaryInformation": "Tween::TweenBehavior",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Set the duration of the upward movement spikes, in milliseconds.",
+              "longDescription": "",
+              "name": "MoveUpTime",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Set the duration of the downward movement spikes, in milliseconds.",
+              "longDescription": "",
+              "name": "MoveDownTime",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Animation for the spikes.",
+              "longDescription": "",
+              "name": "MoveAnimation",
+              "optional": false,
+              "supplementaryInformation": "[\"linear\",\"easeInQuad\",\"easeOutQuad\",\"easeInOutQuad\",\"easeInCubic\",\"easeOutCubic\",\"easeInOutCubic\",\"easeInQuart\",\"easeOutQuart\",\"easeInOutQuart\",\"easeInQuint\",\"easeOutQuint\",\"easeInOutQuint\",\"easeInSine\",\"easeOutSine\",\"easeInOutSine\",\"easeInExpo\",\"easeOutExpo\",\"easeInOutExpo\",\"easeInCirc\",\"easeOutCirc\",\"easeInOutCirc\",\"easeOutBounce\",\"easeInBack\",\"easeOutBack\",\"easeInOutBack\",\"elastic\",\"swingFromTo\",\"swingFrom\",\"swingTo\",\"bounce\",\"bouncePast\",\"easeFromTo\",\"easeFrom\",\"easeTo\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Cooldown, Time in seconds between upward and downward movement of the spikes.",
+              "longDescription": "",
+              "name": "Cooldown",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": []
+    }
+  ],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}

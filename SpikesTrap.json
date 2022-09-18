@@ -1,0 +1,383 @@
+{
+  "author": "",
+  "category": "General",
+  "description": "# Create a spikes trap\n-- How to use\n- Add one Sprite to use as base for the spikes.\n- Add one Sprite for the spikes.\n- Set duration for the upward movement of the spikes, in milliseconds.\n- Set duration for the downward movement of the spikes, in milliseconds.\n- Set cooldown time in seconds.",
+  "extensionNamespace": "",
+  "fullName": "Set a Spikes Trap",
+  "helpPath": "https://www.ulisesfreitas.com/gdevelop-extensions/",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBkPSJNMjksM2gtMnYxNGMwLDAuNi0wLjQsMS0xLDFoLTJ2MTFoNWMwLjYsMCwxLTAuNCwxLTFWNEMzMCwzLjQsMjkuNiwzLDI5LDN6Ii8+DQoJPHBhdGggZD0iTTE1LDI5VjE4aC0xYy0wLjYsMC0xLTAuNC0xLTFWM2gtMnYxNGMwLDAuNi0wLjQsMS0xLDF2MTFIMTV6Ii8+DQoJPHBhdGggZD0iTTE5LDN2MTRjMCwwLjYtMC40LDEtMSwxaC0xdjExaDVWMThjLTAuNiwwLTEtMC40LTEtMVYzSDE5eiIvPg0KCTxwYXRoIGQ9Ik04LDE4SDZjLTAuNiwwLTEtMC40LTEtMVYzSDNDMi40LDMsMiwzLjQsMiw0djI0YzAsMC42LDAuNCwxLDEsMWg1VjE4eiIvPg0KPC9nPg0KPC9zdmc+DQo=",
+  "name": "SpikesTrap",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Glyphster Pack/Master/SVG/Music/Music_keyboard_piano_keys_play.svg",
+  "shortDescription": "With 2 Sprites create a spike trap.",
+  "version": "1.0.0",
+  "tags": [
+    "Spikes",
+    "Trap"
+  ],
+  "authorIds": [
+    "ZShmW1xkW7WWl9AkB78VITJMiTw1"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Set a Timed Spike Trap",
+      "fullName": "Set a Timed Spike Trap",
+      "functionType": "Action",
+      "group": "",
+      "name": "SpikesTrap",
+      "private": false,
+      "sentence": "Set a trap with this base:_PARAM2_ and use this spikes:_PARAM3_  this target: _PARAM1_ move up duration:_PARAM5_ move down duration:_PARAM6_ set animation:_PARAM7_ cooldown:_PARAM8_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "SpikesTrapBase",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Spikes",
+                    "SpikesTrapBase.X()",
+                    "SpikesTrapBase.Y()",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Spikes",
+                    "SpikesTrapBase"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::Width"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "=",
+                    "SpikesTrapBase.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "=",
+                    "SpikesTrapBase.ZOrder()-1"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "SpikesTrapBase",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "SpikesTrapBase",
+                    "",
+                    "",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "SpikesTrapBase",
+                    "__SpikesTrapActivated__",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "Spikes",
+                    "SpikesTrapBase",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "SpikesTrapBase",
+                    "__SpikesTrapActivated__",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectPositionYTween"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveUp\"",
+                    "Spikes.Y()-Spikes.Height()+SpikesTrapBase.Height()",
+                    "GetArgumentAsString(\"MoveAnimation\")",
+                    "GetArgumentAsNumber(\"MoveUpTime\")",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "Spikes",
+                    "SpikesTrapBase",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveUp\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveUp\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::RemoveTween"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveUp\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "GetArgumentAsNumber(\"Cooldown\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::AddObjectPositionYTween"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveDown\"",
+                    "Spikes.Y()+Spikes.Height()-SpikesTrapBase.Height()",
+                    "GetArgumentAsString(\"MoveAnimation\")",
+                    "GetArgumentAsNumber(\"MoveDownTime\")",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::PickObjectsLinkedTo"
+                  },
+                  "parameters": [
+                    "",
+                    "Spikes",
+                    "SpikesTrapBase",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::Exists"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveDown\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::HasFinished"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveDown\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Tween::RemoveTween"
+                  },
+                  "parameters": [
+                    "Spikes",
+                    "Tween",
+                    "\"MoveDown\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "SpikesTrapBase",
+                    "__SpikesTrapActivated__",
+                    "False"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "The player.",
+          "longDescription": "",
+          "name": "Player",
+          "optional": false,
+          "supplementaryInformation": "Sprite",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Sprite to use as base for the spikes.",
+          "longDescription": "",
+          "name": "SpikesTrapBase",
+          "optional": false,
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Sprite for the spikes.",
+          "longDescription": "",
+          "name": "Spikes",
+          "optional": false,
+          "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Tween for the spikes.",
+          "longDescription": "",
+          "name": "Tween",
+          "optional": false,
+          "supplementaryInformation": "Tween::TweenBehavior",
+          "type": "behavior"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Set the duration of the upward movement spikes, in milliseconds.",
+          "longDescription": "",
+          "name": "MoveUpTime",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Set the duration of the downward movement spikes, in milliseconds.",
+          "longDescription": "",
+          "name": "MoveDownTime",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Animation for the spikes.",
+          "longDescription": "",
+          "name": "MoveAnimation",
+          "optional": false,
+          "supplementaryInformation": "[\"linear\",\"easeInQuad\",\"easeOutQuad\",\"easeInOutQuad\",\"easeInCubic\",\"easeOutCubic\",\"easeInOutCubic\",\"easeInQuart\",\"easeOutQuart\",\"easeInOutQuart\",\"easeInQuint\",\"easeOutQuint\",\"easeInOutQuint\",\"easeInSine\",\"easeOutSine\",\"easeInOutSine\",\"easeInExpo\",\"easeOutExpo\",\"easeInOutExpo\",\"easeInCirc\",\"easeOutCirc\",\"easeInOutCirc\",\"easeOutBounce\",\"easeInBack\",\"easeOutBack\",\"easeInOutBack\",\"elastic\",\"swingFromTo\",\"swingFrom\",\"swingTo\",\"bounce\",\"bouncePast\",\"easeFromTo\",\"easeFrom\",\"easeTo\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Cooldown, Time in seconds between upward and downward movement of the spikes.",
+          "longDescription": "",
+          "name": "Cooldown",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": []
+}
